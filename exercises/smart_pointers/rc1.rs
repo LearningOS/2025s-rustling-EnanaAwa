@@ -60,7 +60,8 @@ fn main() {
     jupiter.details();
 
     // TODO
-    let saturn = Planet::Saturn(Rc::new(Sun {}));
+    let mut saturn = Planet::Saturn(Rc::new(Sun {}));
+
     println!("reference count = {}", Rc::strong_count(&sun)); // 7 references
     saturn.details();
 
